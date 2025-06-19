@@ -1,0 +1,91 @@
+
+:root {
+    --space-cadet: #b8c0e0;         /* Soft lavender-blue */
+    --oxford-blue: #e3e6f3;         /* Very light bluish white */
+    --prussian-blue: #a9c8dd;       /* Soft sky blue */
+    --space-cadet-2: #a3a8d3;       /* Muted periwinkle */
+    --prussian-blue-2: #7d9fcf;     /* Dusty blue */
+    --light-accent: #c6d4f2;        /* Pale baby blue */
+    --text-light: #fdfdff;          /* Near-white */
+    --pastel-beige: #f5e6cc;        /* Pastel beige */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--pastel-beige);
+}
+
+.title-banner {
+    width: 100%;
+    background: linear-gradient(45deg, var(--space-cadet) 0%, var(--prussian-blue-2) 100%);
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 50px;
+}
+
+.title-banner h1 {
+    color: var(--text-light);
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 20px;
+    padding: 30px;
+    background-color: rgba(109, 127, 200, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+    border: 1px solid rgba(109, 127, 200, 0.25);
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, var(--space-cadet-2) 0%, var(--light-accent) 100%);
+    border-radius: 15px;
+    cursor: pointer;
+    background-size: cover;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    color: var(--text-light);
+    border: 1px solid rgba(109, 127, 200, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, var(--space-cadet) 0%, var(--light-accent) 100%);
+}
+
+.card.flipped {
+    transform: rotateY(180deg) translateY(-6px);
+    font-size: 32px;
+    background: linear-gradient(45deg, var(--prussian-blue) 0%, var(--space-cadet-2) 100%);
+    color: var(--text-light);
+}
+
+footer {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+    background: linear-gradient(45deg, var(--space-cadet) 0%, var(--prussian-blue-2) 100%);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.15);
+    margin-top: auto;
+}
